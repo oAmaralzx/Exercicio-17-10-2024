@@ -3,9 +3,9 @@
 public class Main {
     public static void main(String[] args) {
         // Criar alguns produtos
-        Produto produto1 = new Produto("Camiseta", 90.0);
-        Produto produto2 = new Produto("Calça", 180.0);
-        Produto produto3 = new Produto("Tênis", 450.0);
+        Produto produto1 = new Produto("xaomi note 11", 1100.0);
+        Produto produto2 = new Produto("iphone 11", 1600.0);
+        Produto produto3 = new Produto("iphone 16", 11000.0);
 
         // Criar o carrinho de compras
         CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
@@ -15,15 +15,15 @@ public class Main {
 
         // Aplicar desconto para cliente novo
         carrinho.setDescontoStrategy(new DescontoClienteNovo());
-        System.out.println("Total para Cliente Novo: R$ " + carrinho.calcularTotalComDesconto());
+        System.out.println("Desconto para Cliente Novo: R$ " + carrinho.calcularTotalComDesconto());
 
         // Aplicar desconto para cliente regular
         carrinho.setDescontoStrategy(new DescontoClienteRegular());
-        System.out.println("Total para Cliente Regular: R$ " + carrinho.calcularTotalComDesconto());
+        System.out.println("Desconto para Cliente Regular: R$ " + carrinho.calcularTotalComDesconto());
 
         // Aplicar desconto para cliente VIP
         carrinho.setDescontoStrategy(new DescontoClienteVIP());
-        System.out.println("Total para Cliente VIP: R$ " + carrinho.calcularTotalComDesconto());
+        System.out.println("Desconto para Cliente VIP: R$ " + carrinho.calcularTotalComDesconto());
 
     }
 }
